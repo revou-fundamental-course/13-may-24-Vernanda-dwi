@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Kalkulator VDA Project</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="main-title">Kalkulator VDA</h1>
+        <p class="subtitle"> Kalkulator Perhitungan Luas Dan Keliling Segitiga Dari Mini Project Software Engineering Fundamental Course RevoU  </p>
+    </header>
+
+    <main>
+         <!--LUAS SEGITIGA-->
+         <section id="luas-section";>
+        <section class="triangle-section">
+            <h2>Perhitungan</h2>
+            <button type="button" id="switch-keliling" onclick="hideOrShow()"class="switch-button">Switch ke Keliling Segitiga</button>
+            <div class="content">
+                <h3>Luas Segitiga</h3>
+                <div class="image-container">
+                    <img src="penggunaan-trigonometri-dalam-mencari-luas-segitiga.png" alt="Segitiga">
+                </div>
+                <p>Rumus Luas Segitiga:</p>
+                <p class="formula">L = 1/2 x a x t</p>
+                <p>Dimana:</p>
+                <ul class="details">
+                    <li>L = Luas Segitiga (cm<sup>2</sup>)</li>
+                    <li>a = Panjang Alas Segitiga (cm)</li>
+                    <li>t = Tinggi Segitiga (cm)</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr />
+
+        <section class="Perhitungan">
+            <h2>Hitung Luas Segitiga</h2>
+            <form id="triangleForm" class="form">
+                <div class="input-group">
+                    <label for="inputAlas">a :</label>
+                    <input type="number" id="inputAlas" name="inputAlas" required />
+                </div>
+                <div class="input-group">
+                    <label for="inputTinggi">t :</label>
+                    <input type="number" id="inputTinggi" name="inputTinggi" required />
+                </div>
+                <p>Diketahui:</p>
+                <p id="rumusLuas">L = 1/2 x a x t</p>
+                <p id="hasilLuas">L = 1/2 x ... x ...</p>
+                <div class="button-group">
+                    <button type="button" class="calculate-button" onclick="hitungLuas()">Hitung</button>
+                    <button type="reset" class="reset-button">Reset</button>
+                </div>
+            </form>
+        </section>
+
+    </section>
+
+   <!--KELILING SEGITIGA-->
+   <section id="keliling-section"; style="display: none;">
+       <section class="keliling-segitiga">
+      
+            <h2>Perhitungan</h2>
+            <button type="button" id="switch-keliling" onclick="hideOrShow2()" class="switch-button">Switch ke Luas Segitiga</button>
+            <section class="put">
+                <h3>Keliling Segitiga</h3>
+                <div class="sumber-gambar">
+                    <img src="ksegitiga.png" alt="Segitiga">
+                </div>
+
+                <p>Rumus Keliling Segitiga:</p>
+                <p class="rumus">K = a + b + c </p>
+                <p>Dimana:</p>
+                <ul class="detail">
+                    <li>K = Keliling Segitiga (cm)</li>
+                    <li>a = Panjang Sisi a (cm)</li>
+                    <li>b = Panjang Sisi b (cm)</li>
+                    <li>c = panjang Sisi c (cm)</li>
+                </ul>
+        
+        </section>
+        <hr />
+     
+        <section class="keliling-segitiga2">
+            <h2>Hitung Keliling Segitiga</h2>
+            <form id="triangleNew" class="shape">
+                <div class="put-group">
+                    <label for="inputSisi1">a :</label>
+                    <input type="number" id="inputSisi1" name="inputSisi1" required />
+
+                </div>
+
+            <div class="put-group">
+             <label for="inputSisi2">b :</label>
+                 <input type="number" id="inputSisi2" name="inputSisi2" required />
+                </div>
+            
+                <div class="put-group">
+                    <label for="inputSisi3">c :</label>
+                        <input type="number" id="inputSisi3" name="inputSisi3" required />
+                       </div>
+                
+                       <p>Diketahui:</p>
+                       <p id="rumusKeliling">K = a + b + c</p>
+                       <p id="hasilKeliling">K = ... + ... + ...</p>
+                       <div class="button-group2">
+                        <button type="button" class="calculate-button" onclick="hitungKeliling()">Hitung</button>
+                        <button type="reset" class="reset-button">Reset</button>
+                       </div>
+        </form>
+                    
+        </section>
+</main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
